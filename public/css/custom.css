@@ -1,0 +1,120 @@
+#services{
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+.navbar-brand{
+    margin-top: -23px;
+}
+.btn-l {
+  color: #222;
+  background-color: rgb(255, 255, 248,20);
+  border-color: #595b5d;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 3px;
+  font-size: 18px;
+  /*padding: 10px 10px;*/
+  margin-right: 0px;
+  margin-top:5px;
+}
+.btn-ll {
+  color: white;
+  background-color: #eee;
+  border-color: #fffff8;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 3px;
+  font-size: 18px;
+  /*padding: 10px 10px;*/
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.btn:hover
+ {
+ color: #fcf8e3;
+ border-color: #59534c;
+ background-color: rgba(70, 51, 44, 0);  
+}
+#sect{
+    padding-top : 250px;
+    padding-bottom:250px; 
+}
+#services{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.btn-lll {
+  color: #333;
+  border-color: #595b5d;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 3px;
+  font-size: 18px;
+  /*padding: 10px 10px;*/
+  margin-right: 0px;
+  margin-top:5px;
+}
+.btn-lll:hover
+ {
+ color: #111;
+ border-color: #59534c;
+ background-color: rgba(70, 51, 44, 0);  
+}
+
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0px ;
+    margin-bottom: 0 px;
+	padding-top: 0px;
+
+}
+
+.container {
+    width: 970px;
+    margin-top: 0px;
+}
+
+section h2.section-heading2 {
+    font-size: 40px;
+    margin-top: -10px ;
+    margin-bottom: 0px;
+	padding-top: 0px;
+}
+.vat{
+    margin-bottom :20px;
+    margin-top : 20px;
+   
+}
+
+navbar-brand page-scroll{
+    margin-bottom : 20px;
+}
+
+.vat, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 39px;
+    
+}
+
+aside.clients img {
+    margin: 25px auto;
+}
+
+.image123{
+    max-width: 50%;
+    
+}
+
