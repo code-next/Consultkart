@@ -146,10 +146,17 @@ module.exports={
         j.save();
         res.redirect('/dashboard');
 
+    },
+
+
+    caddjob : function (req,res) {
+       job.findOne({_id : req.body.jid},function (err,j) {
+           j.consultant = req.user.username;
+           j.save();
+           res.send('success');
+       });
+
     }
-
-
-
 
 
 

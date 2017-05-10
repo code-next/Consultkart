@@ -53,7 +53,7 @@ app.get('/dashboard',isLoggedIn,gets.dashboard);
 app.get('/logout',gets.logout);
 
 
-
+app.post('/addjob',isLoggedIn,posts.caddjob);
 app.post('/postjob',isLoggedIn,posts.postjob);
 app.post('/consign',cpUpload,posts.consign);
 app.post('/clsign',clUpload,posts.clsign);

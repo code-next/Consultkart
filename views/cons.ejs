@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <link href=" css/semantic.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/cons.css" rel="stylesheet" type="text/css">
+        <script src="semantic.min.js"></script>
+</head>
+
+<body>
+    <div class="ui grid">
+        <div class="sixteen wide column">
+            <div class="ui menu">
+                <a href="/" class="item">
+                    <h3>Consultkart</h3>
+                </a>
+                <div class="right menu">
+                    <a class="item">
+                        <div class="ui fluid category search">
+                            <div class="ui icon input">
+                                <input class="prompt" type="text" placeholder="Search...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </a>
+
+                    <a class="item"><img class="ui avatar image align-img" src="images/download.jpg">
+
+                    </a>
+
+                    <a href="/logout" class="item">Logout</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ui grid container">
+        <div class="eight wide column">
+            <h3 class="ui header project-list">Project List</h3>
+
+
+
+
+        </div>
+        <div class="two wide column">
+
+            </div>
+        <div class="six wide column">
+            <h3 class="ui header project-list">Featured Jobs</h3>
+        </div>
+    </div>
+
+    <div class="ui grid container">
+        <div class="ten wide column">
+            <%if(jobs.length > 0){%>
+            <% jobs.forEach(function(job){ %>
+            <div class="ui horizontal segments container-flex inner-b">
+
+                <div class="ui segment item-flex-u">
+                    <p class="inner"><%= job.status%></p>
+
+                </div>
+                <div class=" ui segment item-flex">
+                    <a href="" class="inner-m">
+                        <h3 class="ui header"><%= job.title %> </h3>
+                        <p class="time-post"> Posted On
+                            <%= job.postedon.getDate() %>/<%= job.postedon.getMonth()+1%>/<%= job.postedon.getFullYear()%>
+                        </p>
+                    </a>
+                </div>
+                <div class="ui segment item-flex-u">
+                    <p class="inner"><%= job.constatus%></p>
+
+                </div>
+            </div>
+            <% });%>
+            <%}else{%>
+
+             <h3>No Job found.</h3>
+            <% }%>
+        </div>
+        <div class="six wide column">
+            <div class="ui grid">
+
+                <% featured.forEach(function (f) {
+
+                %>
+                <div class="ui card">
+                    <div class="content">
+
+                        <div class="header">
+                            <%=f.title%>
+                        </div>
+                        <div class="meta">
+                            <h5 class=" ui header client-name">Client:<%f.owner%></h5>
+                        </div>
+                        <div class="description">
+                            <%= f.desc %>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="ui two buttons">
+                            <div type="button" class="ui basic green button fet" data-value="<%= f._id %>">Accept</div>
+                            <div class="ui basic blue button " >View Details</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <% })%>
+                <script>
+                    $('.fet').click(function(){
+                        var data = $(this).attr('data-value');
+                        alert(data)
+                        $.ajax({
+                            url: '/addjob',
+                            type: 'post',
+                            dataType: 'json',
+                            success: function (data) {
+                                    window.location.reload();
+                            },
+                            data: {jid : data}
+                        });
+                    });
+                </script>
+               <!--<div class="ui card">-->
+                    <!--<div class="content">-->
+                        <!--<img class="right floated mini ui image" src="images/download.jpg">-->
+                        <!--<div class="header">-->
+                            <!--Elliot Fu-->
+                        <!--</div>-->
+                        <!--<div class="meta">-->
+                            <!--<div class="ui star rating" data-rating="4"></div>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--Elliot requested permission to view your contact details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="extra content">-->
+                        <!--<div class="ui two buttons">-->
+                            <!--<div class="ui basic green button">Hire</div>-->
+                            <!--<div class="ui basic blue button">Profile</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+
+
+
+                <!--<div class="ui card">-->
+                    <!--<div class="content">-->
+                        <!--<img class="right floated mini ui image" src="images/download.jpg">-->
+                        <!--<div class="header">-->
+                            <!--Elliot Fu-->
+                        <!--</div>-->
+                        <!--<div class="meta">-->
+                            <!--<div class="ui star rating" data-rating="4"></div>-->
+                        <!--</div>-->
+                        <!--<div class="description">-->
+                            <!--Elliot requested permission to view your contact details-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="extra content">-->
+                        <!--<div class="ui two buttons">-->
+                            <!--<div class="ui basic green button">Hire</div>-->
+                            <!--<div class="ui basic blue button">Profile</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+
+
+            </div>
+        </div>
+    </div>
